@@ -3,26 +3,17 @@ import React from 'react'
 function Header() {
   return (
     <div>
-      <div className="carousel w-full h-80">
-  <div id="item1" className="carousel-item w-full">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcJfAIkfBxztC1ynu9NQt4g_vVVkZ46-LJ9Q&usqp=CAU" className="w-full" />
-  </div> 
-  <div id="item2" className="carousel-item w-full">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbD_JsmwXwrgvz-_sldjWR1YoYtXTlZ85nVQ&usqp=CAU" className="w-full" />
-  </div> 
-  <div id="item3" className="carousel-item w-full">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwFlCbpb_cLg9Jnm8rKhrqQKq0udWZ8ZIU0g&usqp=CAU" className="w-full" />
-  </div> 
-  <div id="item4" className="carousel-item w-full">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvhfyjX637PSyyrrDWw7WsykQOuWQqmA46IA&usqp=CAU" className="w-full" />
-  </div>
-</div> 
-<div className="flex justify-center w-full py-2 gap-2">
-  <a href="#item1" className="btn btn-xs">1</a> 
-  <a href="#item2" className="btn btn-xs">2</a> 
-  <a href="#item3" className="btn btn-xs">3</a> 
-  <a href="#item4" className="btn btn-xs">4</a>
-</div>
+      <div className="w-full  rounded-xl mb-64">
+        <div className='grid md:grid-cols-2 space-x-64'>
+           <div className=''>
+           <h1 className='text-6xl font-bold text-red-700'>Medical center <br /><span className='font-bold text-blue-700'>Service</span></h1>
+           <p className='mt-10 ml-4'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae saepe iste officia distinctio sequi magnam, aspernatur vel quibusdam eveniet accusamus velit? Exercitationem, voluptatum consequuntur quo recusandae quod aliquam perspiciatis, praesentium quibusdam laudantium iste sint pariatur provident. Beatae temporibus saepe odit laborum sint esse est, assumenda doloribus sapiente nulla ducimus consequatur.</p>
+           </div>
+          <div >
+          <img className='h-96' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2zUMtnVgXcy7foYVk4JDVnhNZLi4JVi_qgw&usqp=CAU" alt="" />
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

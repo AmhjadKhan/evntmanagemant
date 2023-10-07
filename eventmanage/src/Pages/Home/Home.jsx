@@ -10,7 +10,8 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <div className='grid md:grid-cols-3'>
+      <button className='text-4xl bg-success h-24 w-52 rounded-2xl text-white font-semibold mb-10'>ALL SERVICE</button>
+      <div className='grid md:grid-cols-3 gap-5'>
          {
           medical.map(medicaltim => <Madicalcard 
             key={medical.id}
