@@ -15,24 +15,24 @@ function Navber() {
   const navLinks = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink className='text-red-600 font-bold' to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/about">About</NavLink>
+        <NavLink className='text-red-600 font-bold' to="/about">About</NavLink>
       </li>
       <li>
-        <NavLink to="/contact">Contact Us</NavLink>
+        <NavLink className='text-red-600 font-bold' to="/contact">Contact Us</NavLink>
       </li>
       <li>
-        <NavLink to="/login">Log in</NavLink>
+        <NavLink className='text-red-600 font-bold' to="/login">Log in</NavLink>
       </li>
       <li>
-        <NavLink to="/regester">Regester</NavLink>
+        <NavLink className='text-red-600 font-bold' to="/regester">Regester</NavLink>
       </li>
     </>
   );
   return (
-    <div className="navbar bg-base-100 mb-8">
+    <div className="navbar bg-blue-300 mb-8">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -59,7 +59,7 @@ function Navber() {
           </ul>
         </div>
         <div>
-        <a className="btn btn-ghost normal-case text-xl">Madical</a>
+        <a className="btn btn-ghost normal-case text-xl font-extrabold">Madical</a>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -71,7 +71,7 @@ function Navber() {
             <img src='' />
           </div>
         </label>
-        <button className="btn ">Login</button> 
+        <button className="btn bg-yellow-300">Login</button> 
       </div>
     </div>
   );
