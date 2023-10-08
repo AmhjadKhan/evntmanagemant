@@ -1,16 +1,14 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-// import userpic from '../../../assets/user.png'
-// import { useContext } from "react";
-// import { AuthContex } from "../../../providers/AuthProvider";
+import { AuthContex } from "../../Authprovid/Authprovider";
 
 function Navber() {
-  // const {user, logOut} = useContext(AuthContex);
-
-  // const handlelogourt = () =>{
-  //       logOut()
-  //       .then()
-  //       .catch()
-  // }
+  const {user, logOutsec} = useContext(AuthContex);
+  const handleLogout = ()=>{
+    logOutsec()
+    .then()
+    .catch()
+  }
   
   const navLinks = (
     <>
@@ -32,7 +30,7 @@ function Navber() {
     </>
   );
   return (
-    <div className="navbar bg-blue-300 mb-8">
+    <div className="navbar bg-blue-300 mb-8 rounded-xl">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -59,7 +57,9 @@ function Navber() {
           </ul>
         </div>
         <div>
-        <a className="btn btn-ghost normal-case text-xl font-extrabold">Madical</a>
+        <a className="btn btn-ghost normal-case text-xl font-extrabold">HEALTH</a>
+        <div>
+        </div>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -71,7 +71,14 @@ function Navber() {
             <img src='' />
           </div>
         </label>
-        <button className="btn bg-yellow-300">Login</button> 
+        {
+          user ?
+        <button onClick={handleLogout} className="btn bg-yellow-300">Log out</button> 
+         :
+         <Link to='/login'>
+           <button className="btn bg-green-300">Log in</button> 
+         </Link>
+        }
       </div>
     </div>
   );

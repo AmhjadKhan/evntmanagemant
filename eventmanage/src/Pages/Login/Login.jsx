@@ -1,14 +1,32 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContex } from "../../Authprovid/Authprovider";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Login() {
+  const { login, user } = useContext(AuthContex);
+  
+
   const handleLogin = (e) => {
     e.preventDefault();
-    const form = new FormData(e.currentTarget);
-    const email = form.get("email");
-    const password = form.get("password");
-    console.log(email, password)
+    if (user) {
+      toast("Your Account is alredy Login");
+      return;
+    }
+    const formData = new FormData(e.currentTarget);
+    const email = formData.get("email");
+    const password = formData.get("password");
+
+    login(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
+
   return (
     <div>
       <div className="hero min-h-screen bg-gray-400">
@@ -48,18 +66,25 @@ function Login() {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
+                {user ? (
+                  <button className="btn btn-primary">Login</button>
+                ) : (
+                  <button className="btn btn-primary">
+                    Login
+                  </button>
+                )}
               </div>
             </form>
             <p>
               No Account please{" "}
-              <Link className="text-primary" to="/regester">
-                REGESTER
+              <Link className="text-primary" to="/register">
+                REGISTER
               </Link>
             </p>
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }

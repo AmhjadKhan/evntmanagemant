@@ -5,16 +5,23 @@ import About from "../Pages/ABOUT/About";
 import Contact from "../Pages/Contact/Contact";
 import Login from "../Pages/Login/Login";
 import Regester from "../Pages/Regester/Regester";
+import Error from "../Pages/Error/Error";
+import Medicalde from "../Pages/Home/medicaldetails/Medicalde";
 
 const routes = createBrowserRouter([
     {
         path: "/",
         element:<Root />,
+        errorElement:<Error />,
         children: [
             {
                 path:'/',
                 element:<Home />,
                 loader:() => fetch('/Data.json')
+            },
+            {
+                path:'/medical/:id',
+                element:<Medicalde /> 
             },
             {
                 path:'/about',

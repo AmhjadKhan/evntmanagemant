@@ -14,7 +14,7 @@ const Home = () => {
       <div className='grid md:grid-cols-3 gap-5'>
          {
           medical.map(medicaltim => <Madicalcard 
-            key={medical.id}
+            key={medicaltim.id}
             medical={medicaltim}/>)
          }
       </div>
