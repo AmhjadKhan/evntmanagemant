@@ -7,6 +7,9 @@ import Login from "../Pages/Login/Login";
 import Regester from "../Pages/Regester/Regester";
 import Error from "../Pages/Error/Error";
 import Medicalde from "../Pages/Home/medicaldetails/Medicalde";
+import Blog from "../Pages/blog/Blog";
+import Dashboard from "../Pages/dashboard/Dashboard";
+import PrivateRote from "./PrivateRote";
 
 const routes = createBrowserRouter([
     {
@@ -21,7 +24,8 @@ const routes = createBrowserRouter([
             },
             {
                 path:'/medical/:id',
-                element:<Medicalde /> 
+                element:<PrivateRote><Medicalde /></PrivateRote>,
+                loader:() => fetch('/Data.json')
             },
             {
                 path:'/about',
@@ -30,6 +34,14 @@ const routes = createBrowserRouter([
             {
                 path:"/contact",
                 element:<Contact />
+            },
+            {
+               path:'/Blog',
+               element:<PrivateRote><Blog /></PrivateRote>
+            },
+            {
+                path:'/dashboard',
+                element:<PrivateRote><Dashboard /></PrivateRote>
             },
             {
                 path:'/login',

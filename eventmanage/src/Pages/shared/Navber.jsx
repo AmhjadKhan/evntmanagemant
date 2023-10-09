@@ -22,6 +22,12 @@ function Navber() {
         <NavLink className='text-red-600 font-bold' to="/contact">Contact Us</NavLink>
       </li>
       <li>
+        <NavLink className='text-red-600 font-bold' to="/Blog">Blog</NavLink>
+      </li>
+      <li>
+        <NavLink className='text-red-600 font-bold' to="dashboard ">Dashboard</NavLink>
+      </li>
+      <li>
         <NavLink className='text-red-600 font-bold' to="/login">Log in</NavLink>
       </li>
       <li>

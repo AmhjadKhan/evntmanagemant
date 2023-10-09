@@ -36,7 +36,7 @@ const About = () => {
               </ul>
             </p>
           </div>
-          <button onClick={notify} className="bg-blue-400 py-20 mt-0 text-5xl text-white rounded-full">Follow us in Facebook</button>
+          <button onClick={notify} className="bg-blue-400 py-12 mt-0 text-3xl text-white rounded-full">Follow us in Facebook <br />Click me</button>
         </div>
         <ToastContainer />
       </div>

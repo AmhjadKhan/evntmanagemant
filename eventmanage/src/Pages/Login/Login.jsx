@@ -77,7 +77,7 @@ function Login() {
             </form>
             <p>
               No Account please{" "}
-              <Link className="text-primary" to="/register">
+              <Link className="text-primary" to="/regester">
                 REGISTER
               </Link>
             </p>
